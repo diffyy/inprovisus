@@ -1,0 +1,48 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.layer {
+  background-color: #163F5F; /*#dcaa68;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.775;
+}
+
+label[for='toggle'] {
+  cursor: pointer;
+  margin-bottom: 15vh;
+}
+
+input.toggle {
+  display: none;
+}
+
+figure.logo {
+  margin: 0 10%;
+  max-width: 500px;
+}
+
+figure.logo > img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+input.toggle:checked + .layer {
+  transform: translateX(-400vw);
+  -webkit-transform: translateX(-400vw);
+  -ms-transform: translateX(-400vw);
+  transition: all 6000ms ease-out;
+  opacity: 0;
+}
+
+input.toggle:checked + .layer figure {
+  transition: all 6000ms ease-out;
+  -webkit-transform: rotateZ(560deg);
+  -ms-transform: rotateZ(560deg);
+  transform: rotateZ(560deg);
+}
